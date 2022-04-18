@@ -14,11 +14,11 @@ import java.util.List;
 @Data
 public class TacoOrder implements Serializable {
 
-    private static final long serialVersionUID = 1l;
+    private static final long serialVersionUID = 1L;
 
     private long id;
 
-    private Date placeAt;
+    private Date placedAt;
 
     @NotBlank(message = "Delivery name is required")
     private String deliveryName;
@@ -38,7 +38,7 @@ public class TacoOrder implements Serializable {
     @CreditCardNumber(message = "Not a valid credit card number")
     private String ccNumber;
 
-    @Pattern(regexp = "^(0[1-9]|1[0-2])([\\/])([2-9][0-9])$",
+    @Pattern(regexp = "^(0[1-9]|1[0-2])([/])([2-9][0-9])$",
             message = "Must be formatted MM/YY")
     private String ccExpiration;
 
